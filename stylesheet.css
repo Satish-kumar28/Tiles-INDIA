@@ -33,7 +33,7 @@ img {display: none;}
 }
 
 .block {
-    height: 240px;
+    height: 440px;
     width: 25vw;
     background: linear-gradient(0deg, black 75%, transparent 75%);
     font-size: 15px;
