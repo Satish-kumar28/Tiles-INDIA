@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div id = "loader">
+            <div id = "v" class = "loading-bars"></div>
+            <div id = "i" class = "loading-bars"></div>
+            <div id = "b" class = "loading-bars"></div>
+            <div id = "g" class = "loading-bars"></div>
+            <div id = "y" class = "loading-bars"></div>
+            <div id = "o" class = "loading-bars"></div>
+            <div id = "r" class = "loading-bars"></div>
+            <div id = "loading">Loading...</div>
+        </div>
+        <div id = "main">
+            <img src="https://imgur.com/CTaKUcC.jpg">
+            <div class = "line" id = "l-1"></div>
+            <div class = "line" id = "l-2"></div>
+            <div class = "line" id = "l-3"></div>
+            <div id = "bg"></div>
+            <div id = "new-page"><div id = "red-div"></div></div>
+            <div id = "music-page"></div>
+            <div id = "score"></div>
+            <div id = "progress">
+                <div id = "completed-progress"></div>
+                <div class = "checkpoints" id = "c-1"></div>
+                <div class = "checkpoints" id = "c-2"></div>
+                <div class = "checkpoints" id = "c-3"></div>
+            </div>
+            <div id = "stars">
+                <div class = "star" id = "star-1"></div>
+                <div class = "star" id = "star-2"></div>
+                <div class = "star" id = "star-3"></div>
+                <div class = "star" id = "star-4"></div>
+                <div class = "star" id = "star-5"></div>
+            </div>
+            <div id = "you-lost">
+                <div id = "yl-heading">YOU LOST</div>
+                <div id = "yl-stars">STARS EARNED</div>
+                <div id = "yl-back" onclick="Close();">BACK</div>
+                <div id = "yl-watch-ad" onclick = "document.getElementById('yl-watch-ad').innerHTML = 'YOU ARE OFFLINE.';">WATCH AD TO CONTINUE</div>
+            </div>
+        </div>
+        <div id = "menu">
+            <div id = "rules" onclick = "ShowRules();"></div>
+            <div id = "rp">
+                <div id = "back" onclick = "HideRules();">CLOSE</div><br>
+                 I hope you like it and me too.<br>:):) <br> <br> Once the song ends and the blocks stop falling, a small message for you. <br><br>The game might lag in between if the processor of your device is slow. <br>In case the song stops in between then try to rerun the code <br>(there is some issue with playing songs, idk why).<br> (Code not for pc)<br><br>Thank you!<br>©️ Satish_shekhar
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/jerXOM8.jpg');background-position: -30px 0px;"></div>
+                <div class = "song-heading">Main Rahoon Ya Na Rahoon</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(0);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("dance monkey");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/7tJELeS.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Tune Jo Na Kaha</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(1);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("demons");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/xYXeUL9.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Aasan Nahin Yahan </div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(2);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("shape of you");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/xYXeUL9.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Shayad - Love Aaj Kal</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(3);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("we dont talk anymore");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/eGRqW3P.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">kali kali Zulfon Ke</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(4);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("despacito");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/xYXeUL9.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">MAST MAGAN lo-fi</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(5);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("closer");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/xYXeUL9.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Jaan Nisaar</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(6);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("starboy");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/i4r8auW.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Tarasti Hai Nigahen</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(7);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("treat you better");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/xYXeUL9.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">janam janam sath chalna yuhi</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(8);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("on my way");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/lZdMIyX.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">Yaariyan (Baarish)</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(9);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("cardigan");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <div class = "song">
+                <div class = "song-img" style = "background-image: linear-gradient(60deg, transparent 60%, purple 60%), url('https://i.imgur.com/SoHCO2H.jpg');background-position: -30px 0px;background-size: cover;"></div>
+                <div class = "song-heading">main agar kahoon</div>
+                <div class = "empty-star s-1"></div><div class = "empty-star s-2"></div><div class = "empty-star s-3"></div>
+                <div class = "heart" onclick = "Liked(10);" style = 'background-image: url("https://imgur.com/12gZibr.jpg");'></div>
+                <div class = "play" onclick = 'StartGame("alag aasman");'><div class = "shine"></div>PLAY</div>
+            </div>
+            <br><br><br>
+            <a href="https://college-notes.github.io/tap-tap/" target="_blank">Donate to Developer❣ :)</a>
+        </div>
+        <div id = "won-page">
+            <div id = "won-div">
+                <div id = "won-heading">YOU WON!</div>
+                <div id = "win-code">I would like to tell you about my favourite singer, he is Arijit Singh ,<br> Thanks! <br> Donate to Developer. </div>
+                <div id="fans">
+                    <div class = "fan" id = "f-1"></div>
+                    <div class = "fan" id = "f-2"></div>
+                </div>
+                <div class = "lines" id = "ls-1"></div>
+                <div class = "lines" id = "ls-2"></div>
+            </div>
+        </div>
+        <!--dance monkey-->
+        <audio id = "audio0">
+            <source src="https://media1.vocaroo.com/mp3/11Ch2EsenHZc" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=10ayhxJNPJQeb9YfphzxOfFZi4vnbJ_Pm" type="audio/mp3">
+        </audio>
+        <!--demons-->
+        <audio id = "audio1">
+            <source src="https://media1.vocaroo.com/mp3/1cKp4BPrzIYw" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1UYVeyiYBXkCDZXDFJXIcomJfGFnseIMp" type="audio/mp3">
+        </div>
+        <!--shape of you-->
+        <audio id = "audio2">
+            <source src="https://media1.vocaroo.com/mp3/1ddS2yc6D01l" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1NJfydDfvQ3_zy18RtVo4a13ghpkS63_P" type="audio/mp3">
+        </audio>
+        <!--we don't talk anymore-->
+        <audio id = "audio3">
+            <source src="https://media1.vocaroo.com/mp3/1kyBFREtBdaA" type="audio/mp3">
+            <audio id = "audio3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1CWdxSwe6h9qJhJ_4lz3yLfiFWdGyiDm0" type="audio/mp3">
+        </audio>
+        <!--despacito-->
+        <audio id = "audio4">
+            <source src="https://media1.vocaroo.com/mp3/1mRHOlOXHlRF" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1gGXrpeYotmTIbOWHrHzSmUPLioE7QgpY" type="audio/mp3">
+        </audio>
+        <!--closer-->
+        <audio id = "audio5">
+            <source src="https://media1.vocaroo.com/mp3/15vAWRXUFfKT" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1IGt5shhTf0lO20UqwwfcL7wVxFbWIylH" type="audio/mp3">
+        </audio>
+        <!--starboy-->
+        <audio id = "audio6">
+            <source src="https://media1.vocaroo.com/mp3/13eWIZKeNhHY" type="audio/mp3">
+            <source src="https://docs.google.com/uc?export=open&amp;id=1nYQuZYoj0puC4w9vw2Kxh9CcOuGI3gK4" type="audio/mp3">
+        </audio>
+        <!--treat you better-->
+        <audio id = "audio7">
+            <source src="https://media1.vocaroo.com/mp3/12u7pO1Wb5Ly" type="audio/mp3">
+        </audio>
+        <!--on my way-->
+        <audio id = "audio8">
+            <source src="https://media1.vocaroo.com/mp3/15HTmJHwyPY8" type="audio/mp3">
+        </audio>
+        <!--cardigan-->
+        <audio id = "audio9">
+            <source src="https://media1.vocaroo.com/mp3/13JWobc9TCY9" type="audio/mp3">
+        </audio>
+        <!--alag aasman-->
+        <audio id = "audio10">
+            <source src="https://media1.vocaroo.com/mp3/1ik5mtDDk7mb" type="audio/mp3">
+        </audio>
+
+
+    </body>
+
+
+</html>
